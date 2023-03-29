@@ -27,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		805E73C729D3DBD600BE08FA /* kap3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = kap3.gif; path = ../kap3.gif; sourceTree = "<group>"; };
+		805E73CD29D3DCC900BE08FA /* kap3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = kap3.gif; path = ../kap3.gif; sourceTree = "<group>"; };
 		CA7EB5F229CAA714006B686F /* BeReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7EB5F529CAA714006B686F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA7EB5F729CAA714006B686F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		CA7EB61E29CAE329006B686F /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				805E73CD29D3DCC900BE08FA /* kap3.gif */,
 				CA7EB61F29CAE344006B686F /* FeedViewController.swift */,
 				CA7EB62329CB778A006B686F /* PostCell.swift */,
 			);
