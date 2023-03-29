@@ -26,7 +26,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="xcZG97S"><a href="https://i.imgur.com/nRHtOVV.gif">BeReal</a></blockquote>
+<img src='https://i.imgur.com/nRHtOVV.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Kap](https://getkap.co/) for macOS
 
