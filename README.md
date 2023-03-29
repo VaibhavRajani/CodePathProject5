@@ -4,7 +4,7 @@ Submitted by: **Jose Marcon**
 
 **BeReal** is an app that allows users to create and account and post photos on the website with captions on it
 
-Time spent: **8** hours spent in total
+Time spent: **5** hours spent in total
 
 ## Required Features
 
@@ -17,7 +17,6 @@ The following **required** functionality is completed:
  
 The following **optional** features are implemented:
 
-- [ ] Users can pull to refresh their feed and see a loading indicator
 - [x] Users can infinite-scroll in their feed to see past the 10 most recent photos
 - [x] Users can see location and time of photo upload in the feed    
 - [x] User is able to logout
@@ -27,7 +26,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="xcZG97S"><a href="https://imgur.com/xcZG97S">BeReal</a></blockquote>
+<img src='https://i.imgur.com/nRHtOVV.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Kap](https://getkap.co/) for macOS
 
@@ -39,7 +38,7 @@ One challenge I encountered was learning and getting my parse to work
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [Vaibhav Rajani]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
