@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		805E73C829D3DBD700BE08FA /* kap3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 805E73C729D3DBD600BE08FA /* kap3.gif */; };
 		CA7EB5F629CAA714006B686F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EB5F529CAA714006B686F /* AppDelegate.swift */; };
 		CA7EB5F829CAA714006B686F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7EB5F729CAA714006B686F /* SceneDelegate.swift */; };
 		CA7EB5FD29CAA714006B686F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7EB5FB29CAA714006B686F /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		805E73C729D3DBD600BE08FA /* kap3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = kap3.gif; path = ../kap3.gif; sourceTree = "<group>"; };
 		CA7EB5F229CAA714006B686F /* BeReal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeReal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7EB5F529CAA714006B686F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA7EB5F729CAA714006B686F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		CA7EB5E929CAA714006B686F = {
 			isa = PBXGroup;
 			children = (
+				805E73C729D3DBD600BE08FA /* kap3.gif */,
 				CA7EB5F429CAA714006B686F /* BeReal */,
 				CA7EB5F329CAA714006B686F /* Products */,
 			);
@@ -201,6 +204,7 @@
 				CA7EB60229CAA719006B686F /* LaunchScreen.storyboard in Resources */,
 				CA7EB5FF29CAA719006B686F /* Assets.xcassets in Resources */,
 				CA7EB5FD29CAA714006B686F /* Main.storyboard in Resources */,
+				805E73C829D3DBD700BE08FA /* kap3.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
