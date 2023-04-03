@@ -1,6 +1,6 @@
-# Project 5 - *BeReal*
+# Project 6 - *BeReal Part 2*
 
-Submitted by: **Jose Marcon**
+Submitted by: **Vaibhav Rajani**
 
 **BeReal** is an app that allows users to create and account and post photos on the website with captions on it
 
@@ -10,17 +10,10 @@ Time spent: **5** hours spent in total
 
 The following **required** functionality is completed:
 
-- [x] User can register a new account
-- [x] User can log in with newly created account
-- [x] App has a feed of posts when user logs in
-- [x] User can upload a new post which takes in a picture from photo library and a caption    
- 
-The following **optional** features are implemented:
-
-- [x] Users can infinite-scroll in their feed to see past the 10 most recent photos
-- [x] Users can see location and time of photo upload in the feed    
-- [x] User is able to logout
-- [x] User stays logged in when app is closed and open again    
+- [x] User can launch camera to take photo instead of photo library
+- [x] User session persists when application is closed and relaunched
+- [x] Users are able to log out and return to sign in page
+- [x] Users are NOT able to see other photos until they upload their own	
 
 ## Video Walkthrough
 
@@ -28,13 +21,9 @@ Here's a walkthrough of implemented user stories:
 
 <img src='./BeReal/Feed/kap3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [Kap](https://getkap.co/) for macOS
-
-
 ## Notes
 
 Describe any challenges encountered while building the app.
-One challenge I encountered was learning and getting my parse to work
 
 ## License
 
