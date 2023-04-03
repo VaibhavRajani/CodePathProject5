@@ -131,7 +131,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="AH3-XT-x2p">
                                 <rect key="frame" x="0.0" y="103" width="393" height="433"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Caption" borderStyle="roundedRect" placeholder="Write a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHd-V3-ZNo">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PHd-V3-ZNo">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,6 +175,12 @@
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <action selector="onPickedImageTapped:" destination="ywH-xe-7l4" id="jNj-ch-xal"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="camera" catalog="system" id="KkW-OB-2NT">
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <action selector="onTakePhotoTapped:" destination="ywH-xe-7l4" id="L7k-Yq-PRp"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
@@ -402,6 +408,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
         <image name="person.circle.fill" catalog="system" width="128" height="123"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="photo.artframe" catalog="system" width="128" height="93"/>

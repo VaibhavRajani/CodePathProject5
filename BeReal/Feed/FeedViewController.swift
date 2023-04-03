@@ -9,55 +9,64 @@ import UIKit
 import ParseSwift
 
 class FeedViewController: UIViewController {
-    
-    // MARK: - Outlets
-    
+
     @IBOutlet weak var tableView: UITableView!
-    
-    // MARK: - Properties
-    
+    private let refreshControl = UIRefreshControl()
     private var posts = [Post]() {
         didSet {
+            // Reload table view data any time the posts variable gets updated.
             tableView.reloadData()
         }
     }
     
-    // MARK: - View Lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
         tableView.allowsSelection = false
+        
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(onPullToRefresh), for: .valueChanged)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         queryPosts()
     }
-    
-    // MARK: - Actions
+
+    private func queryPosts(completion: (() -> Void)? = nil) {
+        let yesterdayDate = Calendar.current.date(byAdding: .day, value: (-1), to: Date())!
+        // 1. Create a query to fetch Posts
+        // 2. Any properties that are Parse objects are stored by reference in Parse DB and as such need to explicitly use `include_:)` to be included in query results.
+        // 3. Sort the posts by descending order based on the created at date
+        let query = Post.query()
+            .include("user")
+            .order([.descending("createdAt")])
+            .where("createdAt" >= yesterdayDate) // Only include results created yesterday onwards
+            .limit(10) // Limit max number of returned posts to 10
+
+        // Fetch objects (posts) defined in query (async)
+        query.find { [weak self] result in
+            switch result {
+            case .success(let posts):
+                // Update local posts property with fetched posts
+                self?.posts = posts
+            case .failure(let error):
+                self?.showAlert(description: error.localizedDescription)
+            }
+        }
+    }
     
     @IBAction func onLogOutTapped(_ sender: Any) {
         showConfirmLogoutAlert()
     }
     
-    // MARK: - Private Functions
-    
-    private func queryPosts() {
-        let query = Post.query()
-            .include("user")
-            .order([.descending("createdAt")])
-        
-        query.find { [weak self] result in
-            switch result {
-            case .success(let posts):
-                self?.posts = posts
-            case .failure(let error):
-                self?.showAlert(description: error.localizedDescription)
-            }
+    @objc private func onPullToRefresh() {
+        refreshControl.beginRefreshing()
+        queryPosts { [weak self] in
+            self?.refreshControl.endRefreshing()
         }
     }
     
@@ -71,24 +80,20 @@ class FeedViewController: UIViewController {
         alertController.addAction(cancelAction)
         present(alertController, animated: true)
     }
-    
+
     private func showAlert(description: String? = nil) {
         let alertController = UIAlertController(title: "Oops...", message: "\(description ?? "Please try again...")", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default)
         alertController.addAction(action)
         present(alertController, animated: true)
     }
-    
 }
 
-// MARK: - UITableViewDataSource
-
 extension FeedViewController: UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostCell else {
             return UITableViewCell()
@@ -96,10 +101,6 @@ extension FeedViewController: UITableViewDataSource {
         cell.configure(with: posts[indexPath.row])
         return cell
     }
-    
 }
 
-// MARK: - UITableViewDelegate
-
 extension FeedViewController: UITableViewDelegate { }
-
